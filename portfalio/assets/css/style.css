@@ -1,0 +1,566 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    border: none;
+    outline: none;
+}
+
+/* Color utilites */
+:root {
+    --bg-color: #2d2d2d;
+    --scnd-bg-color: rgb(23, 21, 21);
+    --txt-color: rgb(255, 255, 255);
+    --txt-hover-color: rgb(30, 102, 174);
+    --home-color: #29e1ff;
+    --about-color: #048600;
+    --service-color: #1400ff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--txt-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: var(--txt-color);
+}
+
+.head_logo a {
+    font-size: 2rem;
+    color: var(--txt-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.container {
+    max-width: 1770px !important;
+    margin: auto;
+}
+
+.m-t {
+    margin-top: 2rem;
+}
+
+.dflex {
+    display: flex;
+}
+
+.pd {
+    padding-top: 90px;
+}
+
+div.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: var(--scnd-bg-color);
+    padding: 2rem 7%;
+    z-index: 99999;
+    align-items: center;
+    position: fixed;
+}
+
+nav.nav_bar ul {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+nav.nav_bar ul li {
+    padding: 0 5%;
+}
+
+nav.nav_bar ul li.active a {
+    color: var(--txt-hover-color);
+}
+
+nav.nav_bar ul li a {
+    color: var(--txt-color);
+    font-size: 1.8rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+nav.nav_bar ul li a:hover {
+    color: var(--txt-hover-color);
+}
+
+/* < !--============== Home Section ==================-- > */
+#home-sec {
+    padding: 90px 0;
+}
+
+.home-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h_content {
+    flex: 0 0 50%;
+    width: 50%;
+    padding: 1rem 9%;
+}
+
+.h_content h3 {
+    line-height: 5rem;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.h_content h1 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.h_content h2 {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+.h_content h2 span {
+    color: #29e1ff;
+}
+
+.h_content p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+}
+
+.home-images {
+    flex: 30%;
+    width: 30%;
+    border-radius: 50%;
+    margin-top: 15rem;
+}
+
+.home-images img {
+    animation: animate 3s ease infinite;
+}
+
+@keyframes animate {
+
+    0% {
+        transform: translateX(0rem)
+    }
+
+    50% {
+        transform: translateX(1.556rem)
+    }
+
+    100% {
+        transform: translateY(0rem)
+    }
+}
+
+.social_link {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.social_link a {
+    border: 2px solid gray;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0rem;
+    font-size: 20px;
+}
+
+.social_link a:hover {
+    background: var(--service-color);
+}
+
+.h_content a {
+    color: var(--txt-color);
+}
+
+a.hire {
+    padding: .9rem;
+    border-radius: 50px;
+    font-size: 20px;
+    border: 2px solid var(--txt-color);
+    box-shadow: 0 0 1rem var(--txt-color);
+    letter-spacing: .2rem;
+}
+
+a.hire:hover {
+    background: var(--scnd-bg-color);
+    border: 2px solid rgb(55, 255, 0);
+}
+
+.home-images img {
+    border-radius: 50%;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+    box-shadow: 0px 0px 20px 1px #29e1ff;
+}
+
+/* < !--============== End Section ==================-- > */
+
+
+/* < !--============== Skill Section ==================-- > */
+.skill_full_content.dflex {
+    justify-content: space-evenly;
+    gap: 3rem;
+}
+.skill-section .container {
+    padding: 4%
+}
+.skil-heading {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.skill_box {
+    padding: 20px 0;
+}
+.skill_left .title,
+.skill_right .title {
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+}
+.skill_left,
+.skill_right {
+    border: 2px solid #eee000ee;
+    padding: 2%;
+    flex: 1 1 auto;
+}
+.codding_progreess {
+    padding: 1rem 0;
+}
+.codding_progreess h3 {
+    font-size: 2rem;
+}
+.codding_progreess h3 span {
+    color: rgb(0, 255, 34);
+    float: right;
+}
+.codding_progreess .progresess_bar {
+    display: block;
+    width: 100%;
+    height: 2rem;
+    background: gray;
+    border-radius: 3rem;
+}
+.codding_progreess .progresess_bar span{
+    background: rgb(48, 105, 250);
+    height: inherit;
+    width: inherit;
+    display: inherit;
+    border-radius: inherit;
+}
+/* < !--============== End Skill Section ==================-- > */
+
+
+/* < !--============== About Section ==================-- > */
+
+.about-section .heading {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.about-img {
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    width: 50%;
+    flex: 0 0 50%;
+
+}
+
+#about-sec img {
+    border-radius: 100%;
+    width: 50%;
+    order: 1;
+    box-shadow: 0px 50px 100px #6017ff;
+}
+
+.about-content {
+    text-align: left;
+    order: 2;
+    width: 50%;
+    flex: 0 0 50%;
+}
+
+.content.dflex {
+    align-items: center;
+}
+
+.about-content h1 {
+    font-size: 3rem;
+    height: 40px;
+}
+
+.about-content h2 {
+    height: 40px;
+    font-size: 2.1rem;
+}
+
+.about-content p {
+    height: 40px;
+    font-size: 1.6rem;
+    padding-bottom: 20rem;
+    width: 75%;
+    font-style: italic;
+    text-align: justify;
+}
+
+.about-content a.hire {
+    box-shadow: none;
+    border: 3px solid var(--about-color);
+}
+
+/* < !--============== End Section ==================-- > */
+
+/* < !--============== Service Section ==================-- > */
+.service-container.dflex {
+    flex-wrap: wrap;
+}
+
+.service-section h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+.service-section h2 span {
+    margin: 0 15px;
+    color: var(--service-color);
+}
+
+.service-container.dflex .service-card {
+    width: 30%;
+    flex: 0 0 30%;
+    padding: 15px 3%;
+    margin: 15px;
+    box-shadow: 2px 1px 13px 2px #424242;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.service-container.dflex .service-card:hover {
+    transform: scale(1.02);
+    box-shadow: none;
+    border: 3px solid var(--service-color);
+}
+
+.service-container.dflex .service-card i {
+    font-size: 5em;
+}
+
+.service-container.dflex .service-card h3 {
+    font-size: 2em;
+    margin: 20px
+}
+
+.service-container.dflex .service-card p {
+    margin: 30px
+}
+
+.service-container.dflex .service-card a.hire {
+    padding: 10px;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 20px;
+    border: 3px solid var(--service-color);
+    box-shadow: none;
+}
+
+
+/* < !--============== End Section ==================-- > */
+
+
+
+/* < !--============== Portfalio
+
+/* < !--============== Portfalio Section ==================-- > */
+
+.portfalio-section h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+.portfalio-section h2 span {
+    margin: 0 15px;
+    color: #008026;
+    background: #b5aaff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.portfalio_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.porttfalio-img {
+    width: 100%;
+}
+
+.porttfalio-img img {
+    width: 100%;
+    transition: 0.3s ease;
+    height: 50rem;
+}
+
+.porttfalio-img img:hover {
+    transform: scale(1.1);
+}
+
+.portfalio_box {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    border-radius: 2em;
+    box-shadow: 0 0px 4px 1px #282323;
+    height: 50rem;
+}
+
+.portfalio-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(168, 100, 100, 0.55), #211c64);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s ease;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.portfalio_box:hover .portfalio-content {
+    transform: translateX(0) !important;
+    opacity: 1;
+}
+
+.portfalio-content h3 {
+    font-size: 3rem;
+    padding-bottom: 50px;
+}
+
+.portfalio-content p {
+    padding-bottom: 50px;
+    font-size: 1.5rem;
+}
+
+.portfalio-content i {
+    font-size: 2rem;
+    background: #7400ff;
+    padding: 3%;
+    border-radius: 100%;
+}
+
+/* < !--============== End Portfalio Section ==================-- > */
+/* 
+
+< !--============== Contact Section ==================-- > */
+.form-heading h2 {
+    text-align: center;
+    font-size: 5rem;
+}
+
+.contact-form.pd form {
+    padding: 0 9%;
+}
+
+.contact-form form p {
+    margin: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form form p input[type="text"],
+.contact-form form p input[type="tel"],
+.contact-form form p input[type="email"] {
+    width: 49%;
+    padding: 15px;
+    border-radius: 3px;
+    background: #555454;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.contact-form form p textarea {
+    padding: 15px;
+    height: 200px;
+    border-radius: 3px;
+    width: 100%;
+    resize: none;
+    background: #555454;
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+.contact-form form p button {
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    color: #2000ff;
+    background: #000;
+}
+
+.contact-form form p button:hover {
+    background: #fff;
+}
+
+/* < !--============== End Contact Section ==================-- > */
+
+/* < !--============== End Footer Section ==================-- > */
+.footer-area .copyright {
+    display: flex;
+    position: relative;
+    background: #000;
+    padding: 2%;
+}
+
+.copyright-text p {
+    font-size: 1.5rem;
+}
+
+.top_scroll {
+    right: 46px;
+    position: absolute;
+    top: -65px;
+    background: var(--service-color);
+    padding: 1%;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.top_scroll i {
+    font-size: 2rem;
+}
+
+/* < !--============== End Footer Section ==================-- > */
